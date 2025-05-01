@@ -73,8 +73,7 @@ if uploaded_file is not None:
                 
                 # 결과 표시
                 st.success(f"예측 결과: **{predicted_digit}**")
-                confidence_normalized = min(max(confidence / 100, 0.0), 1.0)
-                st.progress(confidence_normalized)
+                
                 st.write(f"확신도: {confidence:.2f}%")
                 
                 # 전체 예측 분포 시각화
